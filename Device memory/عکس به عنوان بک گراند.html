@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Photo Background</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <style type="text/css" media="all">
+        body {
+            display: inline-block;
+            direction: rtl;
+            background-image: url('https://www.100honar.com/content/images/photography/Landscape/%D9%84%D9%86%D8%AF%D8%A7%D8%B3%DA%A9%DB%8C%D9%BE10.jpg');
+            background-repeat: no-repeat;
+        }
+        
+    </style>
+    <script type="text/javascript">
+
+        function disableselect(e) {
+            return false
+        }
+
+        function reEnable() {
+            return true
+        }
+
+        //if IE4+
+        document.onselectstart = new Function ("return false")
+
+        //if NS6
+        if (window.sidebar) {
+            document.onmousedown = disableselect
+            document.onclick = reEnable
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>
+            بانک سپه
+            <span style="font-size:12; color:#ccc;">
+                (انصار سابق)
+            </span>
+        </p>
+        <div class="card-number">
+            <div class="pl">6273</div><div class="pll">8111</div><div class="plll">7582</div><div class="pllll">4645
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" charset="utf-8">
+        navigator.getBattery().then(function (battery) {
+            let level = battery.level * 100 + "%";
+            document.querySelector(".percentage").textContent = level;
+            document.querySelector(".battery_pre").style.width = level;
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div class="battery">
+            <div class="battery_lvl">
+            <div class="battery_pre"></div>
+        </div>
+        </div>
+        
+        <div class="flo percentage">
+            50%
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+<style>
+:root {
+  --bg: #fff;
+
+  --gradient1: linear-gradient(#f3f5f5, #adff2f);
+
+  --gradient2: linear-gradient(#ff2871, rgba(9, 220, 243, 0.2));
+
+  --txtcolor: #dc143c;
+
+  --batteryborder: #333;
+
+  --batterynotch: #333;
+
+  --batteryPrecentageLvl: linear-gradient(90deg, #9c28af, #fc2c72);
+}
+.dark {
+  --bg: #161623;
+
+  --gradient1: linear-gradient(#ffc107, #e91e63);
+
+  --gradient2: linear-gradient(#2196f3, #31ff38);
+
+  --txtcolor: #fff;
+
+  --batteryborder: #fff;
+
+  --batterynotch: #fff;
+
+  --batteryPrecentageLvl: linear-gradient(90deg, #ffeb3b, #27ff00);
+}
+section {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: relative;
+
+  background: var(--bg);
+}
+section:before {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+
+  height: 240px;
+
+  background: var(--gradient1);
+
+  border-radius: 50%;
+
+  transform: translate(-150px, -99px);
+}
+section:after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  background: var(--gradient2);
+
+  border-radius: 50%;
+
+  transform: translate(150px, 150px);
+}
+.box {
+  width: 240px;
+
+  height: 350px;
+
+  background: cyan;
+
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+
+  backdrop-filter: blur(10px);
+
+  z-index: 1;
+}
+.content {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+}
+.content h3 {
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: var(--txtcolor);
+
+  margin-bottom: 10px;
+}
+.battery {
+  margin: 20px 0;
+
+  width: 140px;
+
+  height: 65px;
+
+  position: relative;
+
+  border: 3px solid var(--batteryborder);
+
+  border-radius: 4px;
+}
+.battery:before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  right: -10px;
+
+  width: 8px;
+
+  height: 16px;
+
+  background: var(--batterynotch);
+
+  transform: translateY(50%);
+
+  border-top-right-radius: 4px;
+
+  border-bottom-right-radius: 4px;
+}
+.battery_lvl {
+  position: absolute;
+
+  top: 8px;
+
+  right: 4px;
+
+  left: 4px;
+
+  bottom: 4px;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+.battery_lvl:after {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+
+  height: 50%;
+
+  top: 0px;
+
+  left: 0px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  z-index: 1;
+}
+.battery_pre {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 50%;
+
+  height: 100%;
+
+  border-radius: 4px;
+
+  background: var(--batteryPrecentageLvl);
+}
+.percentage {
+  font-size: 2rem;
+  color: var(--txtcolor);
+  font-weight: 700;
+}
+</style>

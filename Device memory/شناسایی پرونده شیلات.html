@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<script Language="javascript">
+
+
+
+<!begin
+var my_no,count;
+function load() {
+window.defaultstatus="javascript guess-a-number game";
+document.game.help.value=".لطفاً محدوده اعداد را تنظیم کنید و دکمه شروع را فشار دهید";
+document.game.from.focus(); }
+function rnd(scale) {
+var dd=new date();
+return((math.round(math.abs(math.sin(dd.gettime()))*8.71*scale)%scale)); }
+function range() {
+var to=1+1*document.game.to.value;
+count=0;
+my_no=rnd(to);
+while(my_no<document.game.from.value) {
+my_no=rnd(to); }
+document.game.help.value="شماره پرونده را وارد کنید"; }
+function guess() {
+var no=document.game.number.value;
+count++;
+if(no<my_no) document.game.help.value="شماره پرونده کمتر چهار رقم است و پرونده"+no+"قایق می‌باشد";
+else if(no>my_no) document.game.help.value="شماره پرونده بالای سه رقم است و پرونده"+no+"لنج می‌باشد";
+else alert("خطا"+no+" اشتباه است "); }
+// end -->
+</script>
+</head>
+<body >
+<body onLoad="load()">
+<center>
+<form name=game>
+<tabLe border=3>
+<tr>
+<td align=center colspan=2>تشخیص شماره پرونده</td>
+<td align=center rowspan=2><input type=button value=" start " onclick="range()"></td>
+</tr>
+<tr>
+<td align=center>from:<br><input type=text name=from size=10></td>
+<td align=center>to:<br><input type=text name=to size=10></td>
+</td>
+<tr>
+</tr>
+<tr>
+
+<td align=center colspan=3><input type=text name=help size=70></td>
+
+</tr>
+<tr>
+</tr>
+<tr><td align=right colspan=3><input type=text name=number size=10><input type=button value=" شناسایی " onclick="guess()"></td>
+</tr>
+</tabLe>
+</form>
+</center>
+</body>
+</html>

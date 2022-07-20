@@ -1,0 +1,7 @@
+st
+width: 0;
+height: 0;
+border: 0 solid transparent;
+border-right-width: 51px;
+border-left-width: 51px;
+border-bottom: 102px solid black;

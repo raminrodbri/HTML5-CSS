@@ -1,0 +1,39 @@
+<script language="JavaScript">
+<!-- Hide the script from old browsers --
+function surfto(form) 
+{
+  var myindex=form.dest.selectedIndex
+  window.open(form.dest.options[myindex].value,"main","menubar=1,toolbar=0,location=0,directories=0,status=1,copyhistory=0,width=235,height=235");
+}
+//-->
+</SCRIPT>
+<CENTER>
+<FORM NAME="myform">
+  <SELECT NAME="dest" SIZE=1>
+    <OPTION VALUE="q1">ناصر احمدی
+    <OPTION VALUE="q2">محمد رضا افراز
+    <OPTION VALUE="q3">راشد اقلیما
+    <OPTION VALUE="q4">مهدی بنی سعید
+    <OPTION VALUE="q5">محمد پرموته
+    <OPTION VALUE="q6">نعیم جهان دیده
+    <OPTION VALUE="q7">مهدی حنانه
+    <OPTION VALUE="q8">سجاد خمیری
+    <OPTION VALUE="q9">محمد حسین خواجه اختران
+    <OPTION VALUE="q10">شایان دست آور
+    <OPTION VALUE="q11">مرتضی رده
+    <OPTION VALUE="q12">محسن رمضانی چمازین
+    <OPTION VALUE="q13">رامین رودباری
+    <OPTION VALUE="q14">بنیامین سالاری
+    <OPTION VALUE="q15">ابوالفضل سیفی
+    <OPTION VALUE="q16">امیر شریفی آزاد
+    <OPTION VALUE="q17">مهدی شکوفه نیا
+    <OPTION VALUE="q18">محمد جواد عباس میناب
+    <OPTION VALUE="q19">حسین گوارا
+    <OPTION VALUE="q20">علی رضا ملایی
+    <OPTION VALUE="q21">مهدی نژاد آهن
+    <OPTION VALUE="q22">مهدی نوری شیجانی
+  </SELECT>
+<P>
+<INPUT TYPE="BUTTON" VALUE=" نمایش اطلاعات " onClick="surfto(this.form)">
+</FORM>
+</CENTER>
