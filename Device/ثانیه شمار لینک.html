@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style type="text/css" media="all">
+        body {
+color: #4647;
+            text-align: rtl;
+        }
+        .fdg {
+            border: none;
+            box-shadow: 2px 2px 19px 2px none;
+             width: cover;
+            height: cover;
+            display:inline-block;
+            font-size: 16px;
+            color: #4647;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>
+        <form name="redirect">
+            <center>
+                <font face="Arial"><b>شما به نسخه پیشرفته هدایت شده اید فیلترشکن خود را روشن کنید.<br><br>
+                    <form>
+                       ثانیه دیگر 
+                       <input class="fdg" type="text" size="3"
+                       name="redirect2" >
+                    </form>
+                     </b></font>
+            </center>
+            <script>
+                var targetURL = "https://12navbari.blogspot.com"
+                var countdownfrom = 60
+                var currentsecond = document.redirect.redirect2.value = countdownfrom+1
+                function countredirect() {
+                    if (currentsecond != 1) {
+                        currentsecond -= 1
+                        document.redirect.redirect2.value = currentsecond
+                    } else {
+                        window.location = targetURL
+                        return
+                    }
+                    setTimeout("countredirect()", 1000)
+                }
+                countredirect()
+            </script>
+            
+        </p>
+    </body>
+</html>

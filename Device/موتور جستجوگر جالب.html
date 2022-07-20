@@ -1,0 +1,63 @@
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function linkDisplay(selection) {
+if (selection=="1") {
+document.form.info.value="Visit the best javascript codes";
+document.form.go.value="http://www.javascriptbestcodes.com";
+}
+else if(selection=="2") {
+document.form.info.value="Visit the best html codes !";
+document.form.go.value="http://www.htmlfreecodes.com";
+}
+else if(selection=="4") {
+document.form.info.value="قفل شده Google موتور جستجوگر روی";
+document.form.go.value="http://www.google.com";
+}
+else if(selection=="5") {
+document.form.info.value="قفل شده Bing موتور جستجوگر روی";
+document.form.go.value="http://www.bing.com";
+}
+else if(selection=="6") {
+document.form.info.value="قفل شده microsoft موتور جستجوگر روی";
+document.form.go.value="http://www.microsoft.com";
+}
+else {
+document.form.info.value = "Visit the Adobe website!";
+document.form.go.value="http://www.adobe.com";
+   } 
+}
+function moreInfo() {
+var page=document.form.go.value;
+window.location=page;
+}
+// End -->
+</script>
+</HEAD>
+
+
+<!--  Demonstration -->
+<center>
+<form name=form>
+<table border=0 width=400>
+<tr>
+</tr>
+<tr>
+<td align=center><a href="javascript:linkDisplay(4);">Google</a><br></td>
+<td align=center><a href="javascript:linkDisplay(5);">Bing</a><br></td>
+<td align=center><a href="javascript:linkDisplay(6);">Microsoft</a><br></td>
+</tr>
+<tr>
+<td colspan=3 align=center>
+<textarea name=info rows=2 cols=40 wrap=virtual>Click a topic above for more info!</textarea><br>
+<input type=button name=button value="برو" onClick="moreInfo()">
+<input type=hidden name=go value="">
+</td></tr>
+</table>
+</form>
+</center>
+<P>
+<BR>
+<P>
+
+</CENTER>

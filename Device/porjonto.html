@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>فرم</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous"/>
+</head>
+<body>
+    <center><h1>form</h1></center>
+    <form action="https://formspree.io/f/mrgrllzz" method="post" accept-charset="utf-8">
+        <center>
+            <p>امروز</p>
+<style>
+<!--
+.styling{
+background-color:black;
+color:lime;
+font: bold 15px MS Sans Serif;
+padding: 3px;
+}
+-->
+</style>
+<span id="digitalclock" class="styling"></span>
+<script>
+<!--
+var alternate=0
+var standardbrowser=!document.all&&!document.getElementById
+if (standardbrowser)
+document.write('<form name="tick"><input type="text" name="tock" size="6">#####')
+function show(){
+if (!standardbrowser)
+var clockobj=document.getElementById? document.getElementById("digitalclock") : document.all.digitalclock
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var dn="AM"
+
+if (hours==12) dn="PM" 
+if (hours>12){
+dn="PM"
+hours=hours-12
+}
+if (hours==0) hours=12
+if (hours.toString().length==1)
+hours="0"+hours
+if (minutes<=9)
+minutes="0"+minutes
+if (standardbrowser){
+if (alternate==0)
+document.tick.tock.value=hours+" : "+minutes+" "+dn
+else
+document.tick.tock.value=hours+"   "+minutes+" "+dn
+}
+else{
+if (alternate==0)
+clockobj.innerHTML=hours+"<font color='lime'> : </font>"+minutes+" "+"<sup style='font-size:1px'>"+dn+"</sup>"
+else
+clockobj.innerHTML=hours+"<font color='black'> : </font>"+minutes+" "+"<sup style='font-size:1px'>"+dn+"</sup>"
+}
+alternate=(alternate==0)? 1 : 0
+setTimeout("show()",1000)
+}
+window.onload=show
+
+//-->
+</script>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    </head>
+    <body><center>
+<SCRIPT language="javascript">
+function showdate() {
+    week= new Array("يكشنبه","دوشنبه","سه شنبه","چهارشنبه","پنج شنبه","جمعه","شنبه")
+    months = new Array("فروردين","ارديبهشت","خرداد","تير","مرداد","شهريور","مهر","آبان","آذر","دی","بهمن","اسفند");
+    a = new Date();
+    d= a.getDay();
+    day= a.getDate();
+    month = a.getMonth()+1;
+    year= a.getYear()-100;
+
+	year = (year== 0)?2000:year;
+	(year<1000)? (year += 2000):true;
+    
+	year -= ( (month < 3) || ((month == 3) && (day < 21)) )? 622:621;
+
+	switch (month) {
+    	case 1: (day<21)? (month=10, day+=10):(month=11, day-=20); break;
+    	case 2: (day<20)? (month=11, day+=11):(month=12, day-=19); break;
+    	case 3: (day<21)? (month=12, day+=9):(month=1, day-=20);   break;
+    	case 4: (day<21)? (month=1, day+=11):(month=2, day-=20);   break;
+    	case 5:
+    	case 6: (day<22)? (month-=3, day+=10):(month-=2, day-=21); break;
+    	case 7:
+    	case 8:
+    	case 9: (day<23)? (month-=3, day+=9):(month-=2, day-=22);  break;
+    	case 10:(day<23)? (month=7, day+=8):(month=8, day-=22);    break;
+    	case 11:
+    	case 12:(day<22)? (month-=3, day+=9):(month-=2, day-=21);  break;
+       default:  	break;
+	}
+document.write(week[d]+" "+day+" "+months[month-1]+" "+ year);
+}
+showdate()
+</SCRIPT>
+    </center>
+            <br /><br /><br />
+            <input type="number" class="1010"name="شماره اول" placeholder="شماره تلفن قدیمی"/>
+            <br /><br />
+            <input type="number" class="1010"name="شماره جدید" value="" placeholder="شماره تلفن جدید" />
+            <br /><br /><br /><br />
+            <input type="submit" class="btn btn-primary"name="ثبت" value="ثبت" />
+        </center>
+    </form>
+    </body>
+</html>
+   <style>
+      body {
+
+        background-color: #eee;
+      }
+      form {
+        width: 100%;
+        max-width: 450px;
+      }
+    </style>

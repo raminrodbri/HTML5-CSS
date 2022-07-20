@@ -1,0 +1,294 @@
+<html>
+<form action="" method="post" accept-charset="utf-8">
+      نام و نام خانوادگی : <SELECT NAME="نام" SIZE=1>
+          <option value="">
+    <OPTION VALUE="">ناصر احمدی
+    <OPTION VALUE="">محمد رضا افراز
+    <OPTION VALUE="">راشد اقلیما
+    <OPTION VALUE="">محمد رضا اورنگی
+    <OPTION VALUE="">مهدی بنی سعید
+    <OPTION VALUE="">محمد پرموته
+    <OPTION VALUE="">نعیم جهان دیده
+    <OPTION VALUE="">مهدی حنانه
+    <OPTION VALUE="">سجاد خمیری
+    <OPTION VALUE="">محمد حسین خواجه اختران
+    <OPTION VALUE="">شایان دست آور
+    <OPTION VALUE="">مرتضی رده
+    <OPTION VALUE="">محسن رمضانی چمازین
+    <OPTION VALUE="">رامین رودباری
+    <OPTION VALUE="">بنیامین سالاری
+    <OPTION VALUE="">ابوالفضل سیفی
+    <OPTION VALUE="">امیر شریفی آزاد
+    <OPTION VALUE="">مهدی شکوفه نیا
+    <OPTION VALUE="">محمد جواد عباس میناب
+    <OPTION VALUE="">حسین گوارا
+    <OPTION VALUE="">علی رضا ملایی
+    <OPTION VALUE="">مهدی نژاد آهن
+    <OPTION VALUE="">مهدی نوری شیجانی
+  </SELECT>
+    <br/>
+تاریخ تولد : <SELECT NAME="سال" SIZE=1>
+    <OPTION VALUE="">1380
+    <OPTION VALUE="">1381
+    <OPTION VALUE="">1382
+    <OPTION VALUE="">1383
+    </SELECT>
+<SELECT NAME=" ماه" SIZE=1>
+    <OPTION VALUE="">فروردین
+    <OPTION VALUE="">اردیبهشت
+    <OPTION VALUE="">خرداد
+    <OPTION VALUE="">تیر
+    <OPTION VALUE="">مرداد
+    <OPTION VALUE="">شهریور
+    <OPTION VALUE="">مهر
+    <OPTION VALUE="">آبان
+    <OPTION VALUE="">آذر
+    <OPTION VALUE="">دی
+    <OPTION VALUE="">بهمن
+    <OPTION VALUE="">اسفند
+    </SELECT>
+<SELECT NAME="روز" SIZE=1>
+    <OPTION VALUE="">1
+    <OPTION VALUE="">2
+    <OPTION VALUE="">3
+    <OPTION VALUE="">4
+    <OPTION VALUE="">5
+    <OPTION VALUE="">6
+    <OPTION VALUE="">7
+    <OPTION VALUE="">8
+    <OPTION VALUE="">9
+    <OPTION VALUE="">10
+    <OPTION VALUE="">11
+    <OPTION VALUE="">12
+    <OPTION VALUE="">13
+    <OPTION VALUE="">14
+    <OPTION VALUE="">15
+    <OPTION VALUE="">16
+    <OPTION VALUE="">17
+    <OPTION VALUE="">18
+    <OPTION VALUE="">19
+    <OPTION VALUE="">20
+    <OPTION VALUE="">21
+    <OPTION VALUE="">22
+    <OPTION VALUE="">22
+    <OPTION VALUE="">24
+    <OPTION VALUE="">25
+    <OPTION VALUE="">26
+    <OPTION VALUE="">27
+    <OPTION VALUE="">28
+    <OPTION VALUE="">29
+    <OPTION VALUE="">30
+    <OPTION VALUE="">31
+        </SELECT> 
+        <center>
+      <br /> <br />
+        شماره تلفن : <input type="number" name="شماره" placeholder="شماره تلفن">
+      <br/> <br />
+        ایمیل : <input type="email" placeholder="ایمیل" name="ایمیل">
+      <br /> <br />
+        بیوگرافی : <input type="txt" name="بیوگرافی" placeholder="متن خود را بنویسید">
+      <br /> <br /> 
+      <input type="submit" value="اضافه کردن" class="boot">
+      </center>
+</form>
+        </html>
+        <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background:linear-gradient(rgba(0, 0, 0, 0.842),#191818);
+            height: 100vh;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box{
+            background-color: rgb(23,25,24);
+            box-sizing: border-box;
+            border: 5px solid rgb(8, 53, 23);
+            padding: 40px;
+            width: 400px;
+            border-radius: 410px;
+        }
+
+        @media only screen and (max-width: 550px){
+            body{
+                overflow: hidden;
+            }
+        .login-box{ 
+                border-radius: 10px;
+                margin-top: -30px;
+            }
+        }
+
+        .login-box h2{
+            font-size: 40px;
+            margin-bottom: 30px;
+            padding: 0px;
+            color:white;
+            text-align: center;
+            animation: color 10s linear infinite;
+        }
+        @keyframes color{
+            0%{
+                color: white;
+            }
+            10%{
+                color: black;
+            }
+            20%{
+                color: blue;
+            }
+            30%{
+                color: green;
+            }
+            40%{
+                color: yellow;
+            }
+            50%{
+                color: orange;
+            }
+            60%{
+                color: red;
+            }
+            70%{
+                color: pink;
+            }
+            80%{
+                color: black;
+            }
+        }
+        .user-box{
+            position: relative;
+        }
+        .user-box input{
+            width: 100%;
+            padding: 10px 10px;
+            margin: 20px 0px;
+            font-size: 16px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid yellowgreen;
+            outline: none;
+            cursor: pointer;
+            color:white;
+        }
+        .user-box label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 10px;
+            margin: 20px 0px;
+            font-size: 16px;
+            transition: .5s;
+            cursor: pointer;
+            color: #794242;
+        } 
+        .user-box input:focus~label, 
+        .user-box input:active~label{
+            top: -20px;
+            left: 0;
+            color: seagreen;
+        }
+        .login-box form a{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            font-size: 25px;
+            text-decoration:none;
+            text-transform: uppercase;
+            overflow: hidden;
+            margin-left: 75px;
+            margin-top: 40px;
+            padding: 10px 20px;
+            letter-spacing: 2px;
+            background-color: #4e6735;
+            color: #0c0101;
+            border-radius: 5px;
+        }
+        form a:hover{
+            transition: background-color .5s ease-in;
+            background-color:#771616;
+            color: #cebcbc;
+            border-radius: 5px;
+        }
+
+        .login-box a span{
+            position: absolute;
+            border: .5px solid red;
+            display: block;
+        }
+        .login-box a span:nth-child(1){
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 1px;
+            background: red;
+            animation: btn-ani-1 .8s linear infinite;
+        }
+        @keyframes btn-ani-1{
+            0%{
+                left: -100%;
+            }
+            50%,100%{
+                left: 100%;
+            }
+        }
+        .login-box a span:nth-child(2){
+            top: -100%;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: red;
+            animation: btn-ani-2 .8s linear infinite;
+            animation-delay: .20s;
+        }
+        @keyframes btn-ani-2{
+            0%{
+            top: -100%;
+            }
+            50%,100%{
+                top: 100%;
+            }
+        }
+        .login-box a span:nth-child(3){
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 1px;
+            background: red;
+            animation: btn-ani-3 .8s linear infinite;
+            animation-delay: .40s;
+        }
+        @keyframes btn-ani-3{
+            0%{
+                right: -100%;
+            }
+            50%,100%{
+                right: 100%;
+            }
+        }
+        .login-box a span:nth-child(4){
+            bottom: -100%;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: red;
+            animation: btn-ani-4 .8s linear infinite;
+            animation-delay: .60s;
+        }
+        @keyframes btn-ani-4{
+            0%{
+                bottom: -100%;
+            }
+            50%,100%{
+                bottom: 100%;
+            }
+        }
+
+
+    </style>

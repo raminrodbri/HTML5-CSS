@@ -1,0 +1,177 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="Text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+    crossorigin="anonymous"
+    />
+</head>
+
+<body>
+    <p>
+        توجه : این ادیتور زبان فارسی را پشتیبانی نمی کند .
+    </p>
+    <h3>کد html,js,scc را وارد کنید :</h3>
+    <form action="https://formspree.io/f/mrgrllzz" method="post" accept-charset="utf-8">
+        <textarea name="html جدید ارسالی" id="insert_code"placeholder="<html>" onKeyUp="Preview_HTML()" style="color: rgb(7,230,8");></textarea>
+        <div class="prevew_cp">
+            <label for="activity">وضعیت پیشنمایش:</label>
+            <select id="activity">
+                <option value="active">فعال</option>
+                <option value="inactive">غیر فعال</option>
+            </select>
+            <br /> <br />
+            <center>
+                <button class="btn btn-primary"type="submit" value="اضافه کردن">ثبت</button>
+                <button class="btn btn-primary" type="reset">پاک کردن همه</button>
+            </center>
+        </div>
+    </form>
+    <h3>پیشنمایش :</h3>
+    <iframe frameborder="0" name="preview" id="preview"></iframe></iframe>
+<script>
+    var html;
+    document.getElementById('activity').onchange = function() {
+        Preview_HTML();
+        if (this.value != 'active') {
+            document.getElementById('preview').style.backgroundColor = '#ccc';
+        } else {
+            document.getElementById('preview').style.backgroundColor = '#fff';
+        }
+    }
+    function Preview_HTML() {
+        if (document.getElementById('activity').value != 'active') {
+            return;
+        }
+        var Codes = document.getElementById('insert_code').value;
+        document.getElementById('preview').src = "data:text/html;charset=utf-8," + escape(Codes);
+    }
+</script>
+</body>
+<style>
+@font-face {
+font-family: 'Segoe';
+src: url('files/Segoe-UI.woff') format('ttf'),
+url('files/Segoe-UI.woff') format('woff');
+}
+body {
+padding: 10px;
+margin: 0;
+direction: rtl;
+overflow-x: hidden;
+background-color: #263238;
+color: #fff;
+font-family: 'Segoe',tahoma;
+font-size: 15px;
+text-align: justify;
+line-height: 1.5;
+}
+h2, h3, h4, h5, h6, h1 {
+margin-bottom: 5px;
+}
+hr {
+border-style: solid;
+border-color: #455A64;
+}
+a {
+text-decoration: none;
+border: none;
+color: #fff;
+}
+p {
+margin: 0;
+line-height: 1.5;
+padding: 0;
+}
+
+table {
+width: 100%;
+border-width: 0px;
+border: none;
+margin-top: 15px;
+border-collapse: collapse;
+border-spacing: 0;
+}
+th, td {
+padding: 5px;
+font-size: 15px;
+border-bottom: 3px solid #263238;
+}
+
+ul, ol {
+padding-right: 20px;
+margin: 0;
+}
+
+.pre {
+background: #202020;
+margin: 10px 0;
+direction: ltr;
+overflow: auto;
+width: auto;
+border: solid gray;
+border-width: .1em .1em .1em .8em;
+padding: .2em .6em;
+}
+
+table.tags-list tr td:first-child {
+background-color: #455A64;
+direction: ltr;
+text-align: center;
+width: 25%;
+}
+table tr td {
+font-size: 13px;
+}
+table.main-tings tr td:first-child {
+background-color: #455A64;
+text-align: center;
+width: 20%;
+}
+table.main-tings tr td:nth-child(2) {
+background-color: #455A64;
+text-align: center;
+width: 20%;
+}
+table.main-tings tr:first-child td:last-child {
+background-color: #37474F;
+}
+
+textarea#insert_code {
+width: 100%;
+height: 200px;
+font-family: 'Segoe',tahoma;
+font-size: 13px;
+border: none;
+display: block;
+padding: 10px;
+margin: 10px 0;
+direction: ltr;
+color: #fff;
+background-color: #37474F;
+}
+
+iframe#preview {
+height: 200px;
+border: none;
+margin-top: 10px;
+width: 100%;
+background-color: #fff;
+}
+
+.prevew_cp {
+text-align: center;
+}
+select#activity {
+background-color: #37474F;
+color: #fff;
+padding: 2px;
+font-family: 'Segoe',tahoma;
+font-size: 15px;
+border: none;
+}
+</style>
+</html>

@@ -1,0 +1,39 @@
+<style type="text/css" media="all">
+    .imlp {
+        background: #0000;
+        border: solid 0px;
+    }
+</style>
+<script language="JavaScript">
+var clockID = 0;
+function UpdateClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+   var tDate = new Date();
+
+   document.theClock.theTime.value = "" 
+                                   + tDate.getHours() + ":" 
+                                   + tDate.getMinutes() + ":" 
+                                   + tDate.getSeconds();
+   clockID = setTimeout("UpdateClock()", 1000);
+}
+function StartClock() {
+   clockID = setTimeout("UpdateClock()", 500);
+}
+function KillClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+}
+</script>
+<!--</head>-->
+<body onload="StartClock()" onunload="KillClock()">
+    </body>
+<form namname="theClock">
+   <input type="text" class="imlp" name="theTime" placeholder="ساعت" style="txt-align:center">
+</form>
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<Head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <Style>
+        .ModalDialog {
+            Position: Fixed;
+            Font-Family: Arial, Helvetica, Sans-Serif;
+            Top: 0;
+            Right: 0;
+            Bottom: 0;
+            Left: 0;
+            Background: Rgba(0,0,0,0.8);
+            Z-Index: 99999;
+            Opacity: 0;
+            -Webkit-Transition: Opacity 400ms Ease-In;
+            -Moz-Transition: Opacity 400ms Ease-In;
+            Transition: Opacity 400ms Ease-In;
+            Pointer-Events: None;
+        }
+        .ModalDialog:target {
+            Opacity: 1;
+            Pointer-Events: Auto;
+        }
+        .ModalDialog > Div {
+            Width: 400px;
+            Position: Relative;
+            Margin: 10% Auto;
+            Padding: 5px 20px 13px 20px;
+            Border-Radius: 10px;
+            Background: #Fff;
+            Background: -Moz-Linear-Gradient(#Fff, #999);
+            Background: -Webkit-Linear-Gradient(#Fff, #999);
+            Background: -O-Linear-Gradient(#Fff, #999);
+        }
+        .Close {
+            Background: #606061;
+            Color: #FFFFFF;
+            Line-Height: 25px;
+            Position: Absolute;
+            Right: -12px;
+            Text-Align: Center;
+            Top: -10px;
+            Width: 24px;
+            Text-Decoration: None;
+            Font-Weight: Bold;
+            -Webkit-Border-Radius: 12px;
+            -Moz-Border-Radius: 12px;
+            Border-Radius: 12px;
+            -Moz-Box-Shadow: 1px 1px 3px #000;
+            -Webkit-Box-Shadow: 1px 1px 3px #000;
+            Box-Shadow: 1px 1px 3px #000;
+        }
+        .Close:hover {
+            Background: #00d9ff;
+        }
+    </Style>
+</Head>
+<Body>
+    <A Href="#OpenModal">بازکرن پیام</A>
+    <Div Id="OpenModal" Class="ModalDialog">
+        <Div>
+            <A Href="#Close" Title="Close" Class="Close">X</A>
+            <H2سلام و درود به شما</H2>
+                <P>This Is A Sample Modal Box That Can Be Created Using The Powers Of CSS3.</P>
+                <P>You Could Do A Lot Of Things Here Like Have A Pop-Up Ad That Shows When Your
+                    Website Loads, Or Create A Login/Register Form For Users.</P>
+            </Div>
+        </Div>
+    </Body>
+</html>

@@ -1,0 +1,34 @@
+ <p><!--webbot bot="HTMLMarkup" startspan --><form name="redirect">
+<center>
+<font face="Arial"><b>You will be redirected to the script in<br><br>
+<form>
+<input type="text" size="3" name="redirect2">
+</form>
+ثانیه دیگر</b></font>
+</center>
+
+<script>
+<!--
+
+var targetURL="#######"
+
+var countdownfrom=5
+var currentsecond=document.redirect.redirect2.value=countdownfrom+1
+function countredirect(){
+if (currentsecond!=1){
+currentsecond-=1
+document.redirect.redirect2.value=currentsecond
+}
+else{
+window.location=targetURL
+return
+}
+setTimeout("countredirect()",1000)
+}
+
+countredirect()
+//-->
+</script>
+<!--webbot bot="HTMLMarkup" endspan --></p>
+</body>
+</html>

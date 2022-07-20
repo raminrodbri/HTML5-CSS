@@ -1,0 +1,29 @@
+<html>
+<head>
+<script language="javascript">
+function checkemail(str) {
+	var r1 = new RegExp("(@.*@)|(\\.\\.)|(@\\.)|(^\\.)");
+  var r2 = new RegExp("^.+\\@(\\[?)[a-zA-Z0-9\\-\\.]+\\.([a-zA-Z]{2,3}|[0-9]{1,3})(\\]?)$");
+  var isOK = !r1.test(str) && r2.test(str);
+  if (!isOK)
+  	alert('Invalid Email!');
+  return isOK;
+ }
+</script>
+
+</head>
+
+
+<BODY >
+<center>
+<form method="post" action="#" onSubmit="return checkemail(this.email.value)">
+	<p>Enter an Email Address : 
+		<input type="text" id="email">
+	</p>
+	<p> 
+		<input type="submit" id="submit" value="Submit">
+	</p>
+</form>
+</center>
+</body>
+</html>

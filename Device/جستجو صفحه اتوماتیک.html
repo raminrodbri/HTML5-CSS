@@ -1,0 +1,111 @@
+<BODY>
+<script type="text/javascript" language="JavaScript">
+<!--
+ function GoToURL(j) {
+  window.status=('Connecting....')
+  
+var URLis;
+ URLis = document.URLframe.Dest.value
+  
+   if (URLis == "" || URLis.length <= 10)
+           { 
+     j.value = "               ‌                تلاش دوباره                "
+      alert('\nخطا!\n\n خطا در ورودی');
+         window.status=('داده موجود نیست یا نامعتبر است. دوباره امتحان کنید؟')
+           } 
+    else
+        {
+ j.value = "Connecting to: " + URLis   
+ var location=("https://12navbari"+ URLis);
+         this.location.href = location;
+window.status=('Connecting to ' + URLis + '  Please wait........');
+        }
+        }
+//-->
+</script>
+</head>
+<body>
+<center><h1>...</h1></center>
+<div align="center"><form name="URLframe">
+<table border="0" align="CENTER">
+<tr><td valign="MIDDLE" align="CENTER"><br><font face="Arial, Helvetica"
+dir="2"></font>
+<input type="TEXT" name="Dest"<button><input type="Button" name="Go to" value="                               : رفتن                                 " onClick="GoToURL(this)"></button></td></tr></table></form></div>
+</body>
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  alert('کپی انجام شد');
+}
+</script>
+<style>
+body {
+background: #00000;
+text-align: center;
+font-family: Tahoma;
+}
+.autocopy {
+display: inline-flex;
+margin-top: 170px;
+}
+p {
+width: 200px;
+background: #f8f8f8;
+padding: 15px 20px;
+margin: 0 auto;
+text-align: left;
+border-radius: 5px 0px 0px 5px;
+color: #656565;
+cursor: default;
+box-shadow: 0px 4px 5px -2px #3e3e3e;
+z-index: 5;
+}
+button {
+background: #cc3b3b;
+border: 0;
+border-radius: 0px 5px 5px 0px;
+padding: 0px 15px;
+color: #FFF;
+font-weight: 600;
+cursor: pointer;
+box-shadow: -5px 4px 5px -2px #3e3e3e;
+}
+input {
+width: 300px;
+padding: 15px 20px;
+margin: 0 auto;
+text-align: left;
+border-radius: 5px;
+color: #656565;
+border: 1px solid #4e4e4e;
+}
+</style>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<div class="autocopy">
+<p id="matn">.blogspot.com/p/</p>
+<button onclick="copyToClipboard('#matn')">کپی</button>
+</div>
+<div class="autocopy">
+<p id="matn2">-support.blogspot.com/p/</p>
+<button onclick="copyToClipboard('#matn2')">کپی</button>
+</div>
+<div class="autocopy">
+<p id="matn3">login.blogspot.com/p/</p>
+<button onclick="copyToClipboard('#matn3')">کپی</button>
+</div>
+<div class="autocopy">
+<p id="matn4">-database-1.blogspot.com/p/</p>
+<button onclick="copyToClipboard('#matn4')">کپی</button>
+</div>
+</body>
+</html>

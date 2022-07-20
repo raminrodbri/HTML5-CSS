@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>کپی خودکار متن با جاوا اسکریپت</title>
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  alert('کپی انجام شد');
+}
+</script>
+<style>
+body {
+background: #3794a4;
+text-align: center;
+font-family: Tahoma;
+}
+.autocopy {
+display: inline-flex;
+margin-top: 170px;
+}
+p {
+width: 200px;
+background: #f8f8f8;
+padding: 15px 20px;
+margin: 0 auto;
+text-align: left;
+border-radius: 5px 0px 0px 5px;
+color: #656565;
+cursor: default;
+box-shadow: 0px 4px 5px -2px #3e3e3e;
+z-index: 5;
+}
+button {
+background: #cc3b3b;
+border: 0;
+border-radius: 0px 5px 5px 0px;
+padding: 0px 15px;
+color: #FFF;
+font-weight: 600;
+cursor: pointer;
+box-shadow: -5px 4px 5px -2px #3e3e3e;
+}
+input {
+width: 400px;
+background: #f8f8f8;
+padding: 15px 20px;
+margin: 0 auto;
+text-align: left;
+border-radius: 5px;
+color: #656565;
+border: 1px solid #4e4e4e;
+}
+</style>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<div class="autocopy">
+<p id="matn">https://devme.ir</p>
+<button onclick="copyToClipboard('#matn')">کپی لینک</button>
+</div>
+
+<br/><br/>
+
+<input type="text" placeholder="برای تست اینجا پیست کنید" />
+
+</body>
+</html>
